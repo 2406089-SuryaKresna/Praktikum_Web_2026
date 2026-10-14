@@ -1,33 +1,36 @@
+
 /* Reset */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: birder-box;
+    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #f4f7f4;
     color: #333;
     line-height: 1.6;
 }
 
 /* Header */
 body > header {
-    background-color: white;
+    background-color: #e0ebe1;
     padding: 20px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ccd9ce;
 }
 
-body > header h1{
+body > header h1 {
     max-width: 900px;
     margin: auto;
+    color: #355e3b;
+    font-size: 26px;
 }
 
-/* Navigation */
+/* Navigasi */
 nav {
     max-width: 900px;
-    margin: auto;
+    margin: 12px auto 0;
 }
 
 nav ul {
@@ -37,23 +40,29 @@ nav ul {
 }
 
 nav a {
-    color: #333;
+    color: #355e3b;
     text-decoration: none;
+    font-size: 15px;
 }
 
 nav a:hover {
-    color: #0d6efd;
+    color: #6b8e6e;
+    text-decoration: underline;
 }
 
-/* Main */
+/* Konten utama */
 main {
     max-width: 900px;
     margin: 30px auto;
     padding: 0 20px;
 }
+
 section {
     background-color: white;
     padding: 25px;
+    margin-bottom: 20px;
+    border: 1px solid #e1e8e1;
+    border-radius: 8px;
 }
 
 /* Gambar */
@@ -61,114 +70,137 @@ main img {
     display: block;
     max-width: 100%;
     height: auto;
-    margin: 0;
+    margin: 0 auto;
+    border-radius: 6px;
 }
 
 /* Judul */
 h2 {
+    color: #355e3b;
     margin-bottom: 15px;
 }
 
 h3 {
+    color: #4c7051;
     margin-bottom: 5px;
 }
 
-/* Project */
+/* Proyek */
 #project {
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 article {
- padding: 15px 0;
- border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    border-bottom: 1px solid #e1e8e1;
 }
 
 article:last-child {
- border-bottom: none;
+    border-bottom: none;
 }
 
 /* Form */
 form {
- margin-top: 20px;
+    margin-top: 20px;
 }
 
 form p {
- margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 label {
- display: inline-block;
- margin-bottom: 5px;
+    display: inline-block;
+    margin-bottom: 5px;
 }
 
 input[type="text"],
 input[type="email"],
 select,
 textarea {
- width: 100%;
- padding: 9px;
- border: 1px solid #ccc;
- font-family: Arial, sans-serif;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccd9ce;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 1px solid #6b8e6e;
 }
 
 textarea {
     resize: vertical;
 }
 
+/* Tombol */
 button {
- padding: 9px 15px;
- border: none;
- background-color: #333;
- color: white;
- cursor: pointer;
+    padding: 9px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #527957;
+    color: white;
+    cursor: pointer;
 }
 
 button[type="reset"] {
- background-color: #888;
+    background-color: #999f99;
 }
 
 button:hover {
- opacity: 0.8;
+    opacity: 0.85;
 }
 
-/* Aside */
+/* Informasi tambahan */
 aside {
- max-width: 900px;
- margin: 30px auto;
- padding: 20px;
- background-color: white;
- border-left: 3px solid #0d6efd;
+    max-width: 860px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #e0ebe1;
+    border-left: 4px solid #527957;
+    border-radius: 5px;
 }
 
 /* Footer */
 footer {
- padding: 20px;
- text-align: center;
- color: #777;
- font-size: 14px;
+    padding: 20px;
+    text-align: center;
+    background-color: #e0ebe1;
+    color: #526653;
+    font-size: 14px;
+    border-top: 1px solid #ccd9ce;
 }
-/* Garis <hr> */
+
+/* Garis */
 hr {
- display: none;
+    display: none;
 }
 
 /* Tampilan HP */
 @media (max-width: 700px) {
- nav ul {
- flex-direction: column;
- gap: 8px;
- }
+    body > header h1 {
+        font-size: 22px;
+    }
 
- main {
-    margin-top: 20px;
- }
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
 
- main img {
-    margin: 0 auto;
- }
+    main {
+        margin-top: 20px;
+    }
 
- section {
-    padding: 20px;
- }
+    main img {
+        margin: 0 auto;
+    }
 
+    section {
+        padding: 20px;
+    }
+
+    aside {
+        margin: 20px;
+    }
 }
