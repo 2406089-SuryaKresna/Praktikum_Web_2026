@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Portofolio Proyek - Modul 4</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Proyek portofolio</h1>
+            <p>Modul 4: Pengolahan Logika Data & Interaktivitas DOM</p>
+        </header>
+
+        <!-- Statistik Proyek -->
+        <section class="statistics">
+            <div class="stat-card">
+                <h3>Total Proyek</h3>
+                <p id="totalProjects">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Total Anggaran</h3>
+                <p id="totalBudget">Rp0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Proyek Selesai</h3>
+                <p id="completedProjects">0</p>
+            </div>
+        </section>
+
+        <!-- Form Tambah Proyek -->
+        <section class="panel">
+            <h2>Tambah Proyek Baru</h2>
+
+            <form id="projectForm">
+                <label for="title">Judul Proyek</label>
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Masukkan judul proyek"
+                    required
+                >
+
+                <label for="category">Kategori</label>
+                <select id="category">
+                    <option value="Web App">Web App</option>
+                    <option value="Mobile App">Mobile App</option>
+                    <option value="Desktop App">Desktop App</option>
+                    <option value="UI/UX Design">UI/UX Design</option>
+                </select>
+
+                <label for="budget">Anggaran (Rupiah)</label>
+                <input
+                    type="number"
+                    id="budget"
+                    placeholder="Contoh: 2500000"
+                    min="1"
+                    required
+                >
+
+                <label class="checkbox-label">
+                    <input type="checkbox" id="completed">
+                    Proyek sudah selesai
+                </label>
+
+                <button type="submit">Tambah Proyek</button>
+            </form>
+        </section>
+
+        <!-- Pencarian dan Filter -->
+        <section class="panel">
+            <h2>Daftar Proyek</h2>
+
+            <div class="toolbar">
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Cari nama proyek..."
+                >
+
+                <select id="filterCategory">
+                    <option value="Semua">Semua Kategori</option>
+                    <option value="Web App">Web App</option>
+                    <option value="Mobile App">Mobile App</option>
+                    <option value="Desktop App">Desktop App</option>
+                    <option value="UI/UX Design">UI/UX Design</option>
+                </select>
+            </div>
+
+            <div id="projectList"></div>
+        </section>
+
+        <footer>
+            <p>Tugas Mandiri Modul 4 | JavaScript ES6+</p>
+        </footer>
+    </div>
+</body>
+</html>
