@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aplikasi Todo List</title>
+
+    <!-- Menghubungkan CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Container Todo App -->
+    <div class="todo-app">
+
+        <!-- Judul -->
+        <h2>Todo List</h2>
+
+        <!-- Form Tambah Tugas -->
+        <form id="todoForm">
+
+            <div class="input-section">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Masukkan tugas..."
+                    autocomplete="off"
+                >
+
+                <button type="submit" class="add-btn">
+                    Tambah
+                </button>
+
+            </div>
+
+            <!-- Pesan Error -->
+            <p id="inputError" class="error-message">
+                Tugas minimal 3 karakter!
+            </p>
+            <p id="inputError" class="error-message">
+                Tugas 5 !
+            </p>
+
+        </form>
+
+        <!-- Daftar Tugas -->
+        <ul id="todoList" class="todo-list"></ul>
+    </div>
+
+    <!-- Menghubungkan JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

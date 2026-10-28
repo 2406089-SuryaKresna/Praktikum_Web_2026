@@ -1,0 +1,295 @@
+
+/* ========================================
+   1. RESET CSS
+======================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========================================
+   2. BODY
+======================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    background-color: #f8fafc;
+    color: #1e293b;
+
+    padding: 40px 20px;
+
+    display: flex;
+    justify-content: center;
+}
+
+/* ========================================
+   3. CONTAINER TODO APP
+======================================== */
+.todo-app {
+    background-color: #ffffff;
+
+    width: 100%;
+    max-width: 500px;
+
+    padding: 24px;
+
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ========================================
+   4. JUDUL
+======================================== */
+h2 {
+    color: #1d4ed8;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+    font-size: 22px;
+}
+
+/* ========================================
+   5. BAGIAN INPUT
+======================================== */
+.input-section {
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 8px;
+}
+
+/* Input Tugas */
+input[type="text"] {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 10px 14px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+/* Input Error */
+input[type="text"].error {
+    border-color: #dc3545;
+    background-color: #fff5f5;
+}
+
+/* Input Focus */
+input[type="text"]:focus {
+    border-color: #1d4ed8;
+
+    box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.1);
+}
+
+/* ========================================
+   6. TOMBOL TAMBAH
+======================================== */
+button.add-btn {
+    background-color: #1d4ed8;
+    color: white;
+
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
+}
+
+/* Hover Tambah */
+button.add-btn:hover {
+    background-color: #1e40af;
+}
+
+/* ========================================
+   7. PESAN ERROR
+======================================== */
+.error-message {
+    color: #dc3545;
+
+    font-size: 12px;
+
+    margin-bottom: 14px;
+
+    display: none;
+}
+
+/* ========================================
+   8. DAFTAR TUGAS
+======================================== */
+.todo-list {
+    list-style: none;
+
+    margin-top: 14px;
+}
+
+/* ========================================
+   9. ITEM TUGAS
+======================================== */
+.todo-item {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 10px 12px;
+
+    background-color: #f1f5f9;
+
+    border-radius: 6px;
+
+    margin-bottom: 8px;
+
+    border-left: 4px solid transparent;
+
+    transition: background-color 0.2s ease;
+}
+
+/* Hover Item */
+.todo-item:hover {
+    background-color: #e2e8f0;
+}
+
+/* ========================================
+   10. TUGAS SELESAI
+======================================== */
+.todo-item.completed {
+    border-left-color: #16a34a;
+
+    opacity: 0.7;
+}
+
+/* Teks Selesai */
+.todo-item.completed .todo-text {
+    text-decoration: line-through;
+
+    color: #64748b;
+}
+
+/* ========================================
+   11. TEKS TUGAS
+======================================== */
+.todo-text {
+    font-size: 14px;
+
+    flex: 1;
+
+    min-width: 0;
+
+    margin-right: 10px;
+
+    overflow-wrap: anywhere;
+}
+
+/* ========================================
+   12. TOMBOL AKSI
+======================================== */
+.todo-actions {
+    display: flex;
+
+    gap: 6px;
+
+    flex-shrink: 0;
+}
+
+/* ========================================
+   13. STYLE TOMBOL
+======================================== */
+.action-btn {
+    border: none;
+
+    padding: 5px 9px;
+
+    border-radius: 4px;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: background-color 0.2s ease;
+}
+
+/* ========================================
+   14. TOMBOL SELESAI
+======================================== */
+.complete-btn {
+    background-color: #16a34a;
+    color: white;
+}
+
+/* Hover Selesai */
+.complete-btn:hover {
+    background-color: #15803d;
+}
+
+/* ========================================
+   15. TOMBOL HAPUS
+======================================== */
+.delete-btn {
+    background-color: #dc2626;
+    color: white;
+}
+
+/* Hover Hapus */
+.delete-btn:hover {
+    background-color: #b91c1c;
+}
+
+/* ========================================
+   16. RESPONSIVE MOBILE
+======================================== */
+@media (max-width: 480px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .todo-app {
+        padding: 18px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .input-section {
+        gap: 8px;
+    }
+
+    button.add-btn {
+        padding: 10px 12px;
+    }
+
+    .todo-item {
+        padding: 10px;
+    }
+
+    .todo-text {
+        font-size: 13px;
+    }
+
+    .action-btn {
+        padding: 5px 7px;
+        font-size: 11px;
+    }
+
+}
